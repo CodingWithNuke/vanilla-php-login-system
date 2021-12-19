@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // Check for username rules
   if (empty($username)) {
     array_push($errors, 'Username is required.');
-  } else if (strlen($username) < 4) {
+  } else if (strlen($username) < 4 || strlen($username) > 50) {
     array_push($errors, 'Username must be between 4 and 50 characters.');
   }
 
